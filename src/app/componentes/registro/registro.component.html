@@ -1,0 +1,63 @@
+<div class="content">
+    <div class="back_spiner">
+        <mat-spinner *ngIf="active_spi==false"></mat-spinner>
+    </div>
+    <div class="header">
+        <div class="center_con">
+            <div class="img_pri"></div>
+        </div>
+    </div>
+    <div class="title_regis">
+        <h3>Registrate para ingresar</h3>
+    </div>
+    <div class="content_form">
+        <form action="" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+            <div class="input_form">
+                <mat-form-field appearance="fill">
+                    <mat-label>Nombres:</mat-label>
+                    <input matInput placeholder="Diego Uriel" formControlName="firstName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }" />
+                    <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
+                        <div *ngIf="f.firstName.errors.required" class="daterro">Ingresa tu nombre</div>
+                    </div>
+                </mat-form-field>
+            </div>
+            <div class="input_form">
+                <mat-form-field appearance="fill">
+                    <mat-label>Apellidos:</mat-label>
+                    <input matInput placeholder="Apellidos" formControlName="lastName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.lastName.errors }" />
+                    <div *ngIf="submitted && f.lastName.errors" class="invalid-feedback">
+                        <div *ngIf="f.lastName.errors.required" class="daterro">Ingresa tu apellido</div>
+                    </div>
+                </mat-form-field>
+            </div>
+            <div class="input_form">
+                <mat-form-field appearance="fill">
+                    <mat-label>Sexo</mat-label>
+                    <mat-select formControlName="sexo" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.sexo.errors }">
+                        <mat-option value="hombre">Hombre</mat-option>
+                        <mat-option value="mujer">Mujer</mat-option>
+                    </mat-select>
+                    <div *ngIf="submitted && f.sexo.errors" class="invalid-feedback">
+                        <div *ngIf="f.sexo.errors.required" class="daterro">Elige tu sexo</div>
+                    </div>
+                </mat-form-field>
+            </div>
+            <div class="input_form">
+                <mat-form-field class="example-full-width">
+                    <mat-label>Email</mat-label>
+                    <input matInput placeholder="Ex. pat@example.com" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
+                    <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                        <div *ngIf="f.email.errors.required" class="daterro">Ingresa tu email</div>
+                        <div *ngIf="f.email.errors.email" class="daterro">Email no valido</div>
+                    </div>
+                </mat-form-field>
+            </div>
+            <div class="input_form">
+                <mat-checkbox required>Aceptar terminos y condiones</mat-checkbox>
+            </div>
+            <div class="btn_envio">
+                <input type="submit" value="Registrarse">
+            </div>
+        </form>
+    </div>
+</div>

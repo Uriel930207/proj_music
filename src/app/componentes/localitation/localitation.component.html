@@ -1,0 +1,62 @@
+<div class="content">
+    <div class="title_regis">
+        <h3>Bienvenido a nuestra plataforma de musica</h3>
+        <div class="center_con">
+            <div class="img_pri"></div>
+        </div>
+    </div>
+
+    <div class="slider">
+        <ul>
+            <li>
+                <div class="image_one"></div>
+            </li>
+            <li>
+                <div class="image_two"></div>
+            </li>
+            <li>
+                <div class="image_three"></div>
+            </li>
+            <li>
+                <div class="image_four"></div>
+            </li>
+        </ul>
+    </div>
+
+    <div class="content_music_and_location">
+        <div class="content_music_loc">
+            <h2>Musica</h2>
+            <h4>¡¡Elige tu cancion favorita!!</h4>
+
+            <div class="img_audio"></div>
+            <div id="audio"></div>
+
+            <ul id="playlist">
+                <li id="entro">
+                    <div class="img_music"></div><a>Saxon - Little Bit Of What You Fancy</a>
+                </li>
+                <li id="entro_two">
+                    <div class="img_music"></div><a>Saxon - Sailing To America</a>
+                </li>
+                <li id="entro_four">
+                    <div class="img_music"></div><a>Saxon - Just Let Me Rock</a>
+                </li>
+            </ul>
+        </div>
+        <div class="content_music_loc">
+            <h2>Localización</h2>
+            <div class="title_loc" id="title_local">
+                <h3>¡Permitenos tu ubicación para próximos conciertos por tu ciudad!</h3><br>
+                <button class="btn_encontrar" id="btn_local" (click)="getLocation()">Localización</button>
+            </div>
+            <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom" *ngIf="active_map==false">
+                <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+            </agm-map>
+            <p id="demo"></p>
+        </div>
+    </div>
+
+</div>
+
+<script>
+</script>

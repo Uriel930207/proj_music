@@ -1,0 +1,102 @@
+.center_con {
+    position: relative;
+    width: 200px;
+    height: 150px;
+    left: 50%;
+    margin-left: -100px;
+    margin-top: -10px;
+    transition: all .2s ease;
+}
+
+.img_pri {
+    background-image: url(../../../assets/img/logo_pri.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 100%;
+    float: left;
+}
+
+.content {
+    position: relative;
+    background: #000011;
+    float: left;
+    width: 100%;
+    height: 100%;
+}
+
+.header {
+    position: relative;
+    float: left;
+    width: 100%;
+    margin-top: 25px;
+}
+
+.content_form {
+    position: relative;
+    margin: auto;
+    width: 400px;
+    background: white;
+    text-align: center;
+    padding: 24px 20px;
+    border-radius: 10px;
+}
+
+mat-form-field {
+    position: relative;
+    width: 100%;
+}
+
+.title_regis {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.btn_envio {
+    position: relative;
+    margin: 27px 0px;
+}
+
+.btn_envio input {
+    background: transparent;
+    border: none;
+    font-size: 16px;
+    border-bottom: 1px solid;
+    border-radius: 10px;
+    padding: 7px 20px;
+    box-shadow: 0px 2px 8px -2px #000011;
+    cursor: pointer;
+    transition: all .2s ease;
+}
+
+.btn_envio input:hover {
+    background: #000011;
+    border-bottom: 1px solid #000011;
+    color: white;
+    transition: all .2s ease;
+}
+
+.daterro {
+    position: absolute;
+    font-size: 12px;
+    top: 37px;
+    color: red;
+}
+
+.input_form {
+    margin-bottom: 10px;
+}
+
+.back_spiner {
+    position: fixed;
+    width: 200px;
+    height: 200px;
+    left: 53%;
+    top: 65%;
+    margin-left: -100px;
+    margin-top: -100px;
+    transition: all .2s ease;
+    z-index: 999999;
+}
